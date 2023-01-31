@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
         source = "hashicrop/aws",
-        version = "->4.0"
+        version = "~> 4.0"
     }
   }
   backend "s3" {
