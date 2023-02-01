@@ -31,8 +31,8 @@ resource "aws_instance" "servernode" {
   }
 }
 resource "aws_iam_instance_profile" "ec2-profile" {
-  name = "ec2-profile-image"
-  role = "ECR-LOGIN-AUTO-Image"
+  name = "ec2-profile"
+  role = "ECR-LOGIN-AUTO"
    lifecycle {
     create_before_destroy = true # or false
   }
