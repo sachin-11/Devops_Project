@@ -1,12 +1,10 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('service is started..')
-})
+app.get("/", (req, res) => {
+  res.send("Service is up and running");
+});
 
-const PORT = process.env.PORT || 8080
-
-app.listen(PORT, () => {
-    console.log(`Server is listen on port ${PORT}`)
-})
+app.listen(8080, () => {
+  console.log("Server is up");
+});
