@@ -32,7 +32,7 @@ resource "aws_instance" "servernode" {
 }
 resource "aws_iam_instance_profile" "ec2-profile" {
   name = "ec2-profile"
-  role = "ECR-LOGIN-AUTO"
+  role = "EC2-ECR-ROLE"
    lifecycle {
     create_before_destroy = true # or false
   }
