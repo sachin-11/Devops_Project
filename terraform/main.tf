@@ -71,7 +71,7 @@ resource "aws_security_group" "maingroup" {
       prefix_list_ids  = []
       protocol         = "tcp"
       security_groups  = []
-      self             = false
+      self             = true
       to_port          = 80
     }
   ]
