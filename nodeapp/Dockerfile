@@ -1,7 +1,7 @@
-FROM node:14
+FROM node:16
 WORKDIR /usr/app
 COPY package.json .
 RUN npm install
 COPY . .
 EXPOSE 8080
-CMD ["node","start"]
+CMD ["node", "app.js"]
