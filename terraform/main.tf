@@ -103,7 +103,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-south-1"
+ region = "ap-south-1"
 }
 resource "aws_instance" "servernode" {
   ami                    = "ami-06984ea821ac0a879"
