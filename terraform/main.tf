@@ -33,9 +33,6 @@ resource "aws_instance" "servernode" {
 resource "aws_iam_instance_profile" "ec2-profile" {
   name = "ec2-profile"
   role = "EC2-ECR-ROLE"
-   lifecycle {
-    create_before_destroy = true # or false
-  }
 }
 resource "aws_security_group" "maingroup" {
   egress = [
@@ -86,5 +83,5 @@ resource "aws_key_pair" "deployer" {
 
 output "instance_public_ip" {
   value     = aws_instance.servernode.public_ip
-  sensitive = false
+  sensitive = true
 }
