@@ -71,7 +71,7 @@ resource "aws_security_group" "maingroup" {
       prefix_list_ids  = []
       protocol         = "tcp"
       security_groups  = []
-      self             = true
+      self             = false
       to_port          = 80
     }
   ]
@@ -88,5 +88,3 @@ output "instance_public_ip" {
   value     = aws_instance.servernode.public_ip
   sensitive = true
 }
-
-
