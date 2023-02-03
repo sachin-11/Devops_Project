@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "sachinserver" {
-  ami                    = "ami-06984ea821ac0a879"
+  ami                    = "ami-0597375488017747e"
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.deployer_key.key_name
   vpc_security_group_ids = [aws_security_group.secgroup.id]
