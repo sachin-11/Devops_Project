@@ -96,4 +96,4 @@ jobs:
             sudo docker stop sachinappcontainer || true
             sudo docker rm sachinappcontainer || true
             sudo docker pull $REGISTRY/$REPOSITORY:$IMAGE_TAG
-            sudo docker run -d --name myappcontainer -p 80:8080 $REGISTRY/$REPOSITORY:$IMAGE_TAG
+            sudo docker run -d --name sachinappcontainer -p 80:8080 $REGISTRY/$REPOSITORY:$IMAGE_TAG
