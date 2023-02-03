@@ -41,7 +41,7 @@ jobs:
         id: plan
         run: |
           terraform plan -destroy \
-          -var="region=us-east-1" \
+          -var="region=ap-south-1" \
           -var="public_key=$PUBLIC_SSH_KEY" \
           -var="private_key=$PRIVATE_SSH_KEY" \
           -var="key_name=deployer-key" \
@@ -56,7 +56,7 @@ jobs:
         run: |
           echo "::set-output name=instance_public_ip::$(terraform output instance_public_ip)"
         working-directory: ./terraform
-  deploy-app:
+  # deploy-app:
     runs-on: ubuntu-latest
     needs: deploy-infra
     steps:
@@ -92,7 +92,7 @@ jobs:
             sudo apt update
             sudo apt install docker.io -y
             sudo apt install awscli -y
-            sudo $(aws ecr get-login --no-include-email --region us-east-1)
+            sudo $(aws ecr get-login --no-include-email --region ap-south-1)
             sudo docker stop sachinappcontainer || true
             sudo docker rm sachinappcontainer || true
             sudo docker pull $REGISTRY/$REPOSITORY:$IMAGE_TAG
