@@ -76,9 +76,9 @@ resource "aws_security_group" "maingroup" {
 
 }
 
-terraform import resource "aws_key_pair" "deployer" {
+ resource "aws_key_pair" "deployer1" {
   key_name   = var.key_name
-  public_key = var.public_key
+  public_key = var.public_key1
 }
 
 output "instance_public_ip" {
