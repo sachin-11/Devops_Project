@@ -1,5 +1,8 @@
 {
     "yaml.schemas": {
-        "https://json.schemastore.org/eslintrc.json": "file:///d%3A/DemoProjects/DevopsNode/.github/workflows/deploy.yml"
+        "https://json.schemastore.org/eslintrc.json": [
+            "file:///d%3A/DemoProjects/DevopsNode/.github/workflows/deploy.yml",
+            "file:///home/mtpc-488/SachinProjects/Devops_Project/.github/workflows/deploy.yml"
+        ]
     }
 }
