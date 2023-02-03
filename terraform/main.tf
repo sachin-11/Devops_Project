@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "servernode" {
   ami                    = "ami-06984ea821ac0a879"
   instance_type          = "t2.micro"
-  key_name               = aws_key_pair.deployer1.key_name
+  key_name               = aws_key_pair.deployer.key_name
   vpc_security_group_ids = [aws_security_group.maingroup.id]
   iam_instance_profile   = aws_iam_instance_profile.ec2-profile.name
   connection {
@@ -76,7 +76,7 @@ resource "aws_security_group" "maingroup" {
 
 }
 
- resource "aws_key_pair" "deployer1" {
+ resource "aws_key_pair" "deployer" {
   key_name   = var.key_name
   public_key = var.public_key
 }
